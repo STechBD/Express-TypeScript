@@ -1,0 +1,42 @@
+{
+  "name": "express-ts",
+  "version": "1.0.0",
+  "description": "The app skeleton of Express.js with TypeScript",
+  "keywords": [
+	"express",
+	"typescript",
+	"express.js",
+	"node.js",
+	"nodemon",
+	"framework",
+	"aashemul",
+	"stechbd"
+  ],
+  "main": "build/app.js",
+  "scripts": {
+	"start": "node build/app.js",
+	"dev": "nodemon src/app.ts",
+	"build": "ts-node src/build.ts && tsc -p .",
+	"test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+	"cookie-parser": "^1.4.4",
+	"debug": "^2.6.9",
+	"dotenv": "^16.3.1",
+	"express": "^4.17.1",
+	"fs-extra": "^11.1.1",
+	"http-errors": "^1.6.3",
+	"jade": "^1.11.0",
+	"morgan": "^1.9.1",
+	"nodemon": "^3.0.1",
+	"ts-node": "^10.9.1",
+	"typescript": "^5.2.2"
+  },
+  "devDependencies": {
+	"@types/node": "^20.8.0",
+	"@types/express": "^4.17.18",
+	"@types/cookie-parser": "^1.4.4",
+	"@types/fs-extra": "^11.0.2",
+	"@types/morgan": "^1.9.6"
+  }
+}
