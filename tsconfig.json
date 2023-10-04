@@ -11,14 +11,10 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src/*.ts",
-    "src/app/*.ts",
-    "src/routes/*.ts",
-    "src/views/*.jade",
-    "src/public/*/*.*"
+    "src"
   ],
   "exclude": [
-	"src/build.ts",
+    "src/build.ts",
     "node_modules"
   ]
 }
