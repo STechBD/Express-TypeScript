@@ -17,7 +17,7 @@ router.get('/', function (req: Request, res: Response, next: NextFunction): void
 	res.render(
 	    'index',
 	    {
-	        title: 'Express'
+	        title: 'Express',
 	    },
     )
 })
