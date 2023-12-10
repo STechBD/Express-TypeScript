@@ -1,9 +1,10 @@
 {
-  "name": "express-ts",
+  "name": "create-express.js",
   "version": "1.0.0",
-  "description": "The app skeleton of Express.js with TypeScript",
+  "description": "The basic app template of Express.js with TypeScript support",
   "keywords": [
 	"express",
+	"javascript",
 	"typescript",
 	"express.js",
 	"node.js",
@@ -12,6 +13,9 @@
 	"aashemul",
 	"stechbd"
   ],
+  "bin": {
+      "create-express.js": "build/app.js"
+  },
   "main": "build/app.js",
   "scripts": {
 	"start": "node build/app.js",

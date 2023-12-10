@@ -1,12 +1,17 @@
 import express, { Express, NextFunction, Request, Response } from 'express'
+import path from 'path'
 import createError from 'http-errors'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
-import indexRouter from './routes'
-import userRouter from './routes/users'
-import path from 'path'
+import indexRouter from 'routes/index'
+import userRouter from 'routes/users'
 
 
+/**
+ * Create Eserver.js server with navigation
+ *
+ * @since 1.0.0
+ */
 const app: Express = express()
 const port: string | number = process.env.PORT || 3000
 
@@ -34,6 +39,11 @@ app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
 	res.render('error')
 })
 
+/**
+ * Run the server
+ *
+ * @since 1.0.0
+ */
 app.listen(port, (): void => {
 	console.log('Server is up on port ' + port)
 })
