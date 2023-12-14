@@ -19,8 +19,8 @@
   "main": "build/app.js",
   "scripts": {
 	"start": "node build/app.js",
-	"dev": "nodemon src/app.ts",
-	"build": "ts-node src/build.ts && tsc -p .",
+	"dev": "nodemon src/app.ts && sass --watch src/private/scss:src/public/css",
+	"build": "sass src/private/scss:src/public/css && ts-node src/build.ts && tsc -p .",
 	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
@@ -33,6 +33,7 @@
 	"morgan": "^1.9.1",
 	"nodemon": "^3.0.2",
 	"pug": "^3.0.2",
+	"sass": "^1.69.5",
 	"ts-node": "^10.9.2",
 	"typescript": "^5.3.3"
   },

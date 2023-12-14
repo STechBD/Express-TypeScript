@@ -1,4 +1,4 @@
-console.log('Welcome to Create-Express.js by S Technologies')
+console.log('Welcome to Install-Express by S Technologies')
 
 $(document).ready(function () {
 	$('#projectButton').click(function () {

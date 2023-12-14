@@ -3,44 +3,45 @@
   "version": "1.0.0",
   "description": "The basic app template of Express.js with TypeScript support",
   "keywords": [
-	"express",
-	"javascript",
-	"typescript",
-	"express.js",
-	"node.js",
-	"nodemon",
-	"framework",
-	"aashemul",
-	"stechbd"
+    "express",
+    "javascript",
+    "typescript",
+    "express.js",
+    "node.js",
+    "nodemon",
+    "framework",
+    "aashemul",
+    "stechbd"
   ],
   "bin": {
-	"create-express.js": "build/app.js"
+    "create-express.js": "build/app.js"
   },
   "main": "build/app.js",
   "scripts": {
-	"start": "node build/app.js",
-	"dev": "nodemon src/app.ts",
-	"build": "ts-node src/build.ts && tsc -p .",
-	"test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "ts-node src/build.ts && tsc -p .",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-	"cookie-parser": "^1.4.4",
-	"debug": "^4.3.4",
-	"dotenv": "^16.3.1",
-	"express": "^4.17.1",
-	"fs-extra": "^11.2.0",
-	"http-errors": "^2.0.0",
-	"morgan": "^1.9.1",
-	"nodemon": "^3.0.2",
-	"pug": "^3.0.2",
-	"ts-node": "^10.9.2",
-	"typescript": "^5.3.3"
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "express": "^4.17.1",
+    "fs-extra": "^11.2.0",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^3.0.2",
+    "pug": "^3.0.2",
+    "sass": "^1.69.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "devDependencies": {
-	"@types/cookie-parser": "^1.4.6",
-	"@types/express": "^4.17.21",
-	"@types/fs-extra": "^11.0.4",
-	"@types/morgan": "^1.9.9",
-	"@types/node": "^20.10.4"
+    "@types/cookie-parser": "^1.4.6",
+    "@types/express": "^4.17.21",
+    "@types/fs-extra": "^11.0.4",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.10.4"
   }
 }
