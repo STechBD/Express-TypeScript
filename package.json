@@ -1,7 +1,7 @@
 {
-  "name": "create-express.js",
+  "name": "install-express",
   "version": "1.0.0",
-  "description": "The basic app template of Express.js with TypeScript support",
+  "description": "The basic backend app template of Express.js with TypeScript support.",
   "keywords": [
     "express",
     "javascript",
@@ -42,6 +42,6 @@
     "@types/express": "^4.17.21",
     "@types/fs-extra": "^11.0.4",
     "@types/morgan": "^1.9.9",
-    "@types/node": "^20.10.4"
+    "@types/node": "^20.10.5"
   }
 }
