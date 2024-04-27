@@ -14,7 +14,13 @@
 	"src"
   ],
   "exclude": [
+<<<<<<< HEAD
 	"src/build.ts",
 	"node_modules"
+=======
+    "src/build.ts",
+    "src/template",
+    "node_modules"
+>>>>>>> 1b1db398119a89850ecddaab5ee2a1fa7e22b8a6
   ]
 }

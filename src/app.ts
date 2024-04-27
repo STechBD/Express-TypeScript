@@ -36,4 +36,10 @@ app.listen(port, (): void => {
 	console.log('Server is up on port ' + port)
 })
 
+
+/**
+ * Main application file
+ *
+ * @since 1.0.0
+ */
 export default app

@@ -15,6 +15,9 @@
     "aashemul",
     "stechbd"
   ],
+  "bin": {
+    "create-express.js": "build/app.js"
+  },
   "main": "build/app.js",
   "scripts": {
     "start": "node build/app.js",
@@ -30,10 +33,11 @@
     "express": "^4.17.1",
     "fs-extra": "^11.2.0",
     "http-errors": "^2.0.0",
-    "jade": "^0.29.0",
     "morgan": "^1.9.1",
     "nodemon": "^3.0.2",
-    "ts-node": "^10.9.1",
+    "pug": "^3.0.2",
+    "sass": "^1.69.5",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
@@ -41,6 +45,6 @@
     "@types/express": "^4.17.21",
     "@types/fs-extra": "^11.0.4",
     "@types/morgan": "^1.9.9",
-    "@types/node": "^20.10.4"
+    "@types/node": "^20.10.5"
   }
 }
