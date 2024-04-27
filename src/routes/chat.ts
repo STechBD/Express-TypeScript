@@ -1,6 +1,7 @@
-const express = require('express')
-const tf = require('@tensorflow/tfjs')
-const fs = require('fs-extra')
+import express, { Request, Response, NextFunction } from 'express'
+import * as tf from '@tensorflow/tfjs-node'
+import fs from 'fs-extra'
+
 
 /**
  * Define paths
@@ -20,7 +21,7 @@ const modelFile = `${ modelDir }/model.json`
  *
  * @since 1.0.0
  */
-const model = await tf.loadLayersModel(modelFile)
+const model = tf.sequential(fs.readFileSync(modelFile, 'utf-8'))
 const data = JSON.parse(fs.readFileSync(dataFile, 'utf-8'))
 const wordIndex = JSON.parse(fs.readFileSync(wordIndexFile, 'utf-8'))
 
@@ -32,7 +33,7 @@ const wordIndex = JSON.parse(fs.readFileSync(wordIndexFile, 'utf-8'))
  *
  * @since 1.0.0
  */
-function predict(input) {
+function predict(input: string): string | undefined {
 	const tokenizer = new tf.Tokenizer({ wordIndex })
 	const sequences = tokenizer.textsToSequences([ input ])
 	if (!sequences[0].length) {
@@ -70,28 +71,17 @@ const router = express.Router()
  *
  * @since 1.0.0
  */
-router.get('/', function (req, res, next) {
-	try {
-		const { message } = req.body
+router.get('/', function (req: Request, res: Response, next: NextFunction): void {
+	const { message } = req.body
 
-		res.json({
-			status: 'success',
-			app: 'Mama',
-			version: '1.0.0',
-			version_code: 1,
-			parent_app: 'Ulkaa',
-			response: predict(message),
-		})
-	} catch (error) {
-		res.status(500).json({
-			status: 'error',
-			app: 'Mama',
-			version: '1.0.0',
-			version_code: 1,
-			parent_app: 'Ulkaa',
-			response: error.toString(),
-		})
-	}
+	res.json({
+		status: 'success',
+		app: 'Mama',
+		version: '1.0.0',
+		version_code: 1,
+		parent_app: 'Ulkaa',
+		response: predict(message),
+	})
 })
 
 

@@ -3,7 +3,6 @@ import createError from 'http-errors'
 import cookieParser from 'cookie-parser'
 import logger from 'morgan'
 import indexRouter from './routes/index'
-import chatRouter from './routes/chat'
 import path from 'path'
 
 
@@ -20,7 +19,6 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
-app.use('/chat', chatRouter)
 
 app.use(function (req: Request, res: Response, next: NextFunction): void {
 	next(createError(404))
