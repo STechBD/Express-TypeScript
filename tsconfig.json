@@ -1,21 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "CommonJS",
-    "rootDir": "src",
-    "outDir": "build",
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+	"target": "ESNext",
+	"module": "CommonJS",
+	"rootDir": "src",
+	"outDir": "build",
+	"strict": true,
+	"moduleResolution": "node",
+	"esModuleInterop": true,
+	"skipLibCheck": true,
+	"forceConsistentCasingInFileNames": true
   },
   "include": [
-    "src"
+	"src"
   ],
   "exclude": [
+<<<<<<< HEAD
+	"src/build.ts",
+	"node_modules"
+=======
     "src/build.ts",
     "src/template",
     "node_modules"
+>>>>>>> 1b1db398119a89850ecddaab5ee2a1fa7e22b8a6
   ]
 }
